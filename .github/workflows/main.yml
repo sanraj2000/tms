@@ -44,6 +44,4 @@ jobs:
        #   name: report
         #  path: AWS1.json
         
-      - name: Sample
-        run: |
-         vim AWS.json
+
