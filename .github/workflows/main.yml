@@ -38,8 +38,12 @@ jobs:
           name: report
           path: AWS.json
 
-      - name: Download performance test results
-        uses: actions/download-artifact@v3
-        with:
-          name: report
-          path: AWS1.json
+    #  - name: Download performance test results
+     #   uses: actions/download-artifact@v3
+      #  with:
+       #   name: report
+        #  path: AWS1.json
+        
+      - name: Sample
+        run: |
+         vim AWS.json
