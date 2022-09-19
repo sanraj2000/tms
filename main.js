@@ -12,7 +12,7 @@ console.log("started");
             // DEV
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/stage.json",
+             url: "./output/det.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -29,7 +29,7 @@ console.log("started");
      // STAGE
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/AWS.json",
+            url: "./output/det.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
