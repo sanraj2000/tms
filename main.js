@@ -61,33 +61,7 @@ console.log("started");
 
      // ----------##########################------ Start of Azure US -----------------################################---------------
 
-               // Azure US 1012
-               var azure_us_1012 = {
-                method: 'GET',
-               url: "./output/det.json",
-                headers: {"Content-Type": "application/json"}
-             }
-            $http(azure_us_1012).then(function(response2){
-              $scope.allrows_cconns2_azure =response2.data;
-          
-            $scope.totalCount_azure_cc2=$scope.allrows_cconns2_azure.length;
-             }, function(){alert("failed in loading file for Azure_US");});
-      
-          // Azure US 1011
-          var azure_us_1011 = {
-            method: 'GET',
-          url: "./output/det.json",
-            headers: {"Content-Type": "application/json"}
-          }
-          $http(azure_us_1011).then(function(response){
-          $scope.temp = response.data;
- 
-          $scope.allrows_cconns2_azure = $scope.allrows_cconns2_azure.concat($scope.temp);
- 
-          $scope.totalCount_azure_cc2=$scope.allrows_cconns2_azure.length;
-          }, function(){alert("failed in loading file for Azure_US_1011");});
-  
-          
+              
   
     // ---------------------------------------- end of azureUS --------------------------------
   
