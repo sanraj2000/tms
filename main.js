@@ -234,7 +234,9 @@ console.log("started");
                 return input.slice(start);
             }
         });
- //tabs
+
+
+    //tabs
           function connectorTabs(tabName) {
             var i;
             var x = document.getElementsByClassName("wmiotabtype");
@@ -250,6 +252,14 @@ console.log("started");
           //// Get the element with id="defaultOpen" and click on it
           //  document.getElementById("defaultOpen").Click();
 
-         
-Footer
-© 2022 GitHub, Inc.
+          
+          //tabs schedules
+          function connectorTabs2(tabName) {
+            var i;
+            var x = document.getElementsByClassName("wmiotabtype2");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+           
+          }
