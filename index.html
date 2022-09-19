@@ -60,67 +60,25 @@
     <br />
 
    <!-- new sear4ch-->
- <div class="row   " style="padding: 10px; background-color: #F2F2EA ; "> 
-
-    <div class="row" style="width: 100%;">
-        <div class="col-md-2">
-            Search By:
-            <select class="form-control" ng-model='SearchTerm'>
-                <option value='$'>Any</option>
-                <option value='tenantName'>Name</option>
-                <option value='tier'>Type</option>
-                <option value='currentVersion'>Version</option>
-                <option value='tenantStatus'>Status</option>
-            </select>
+     <div class="row">
+            <div class="col-md-4">
+                Search By:
+                <select class="form-control" ng-model='SearchTerm'>
+                    <option value='$'>Any</option>
+                    <option value='tenantName'>Name</option>
+                    <option value='tier'>Type</option>
+                    <option value='currentVersion'>Version</option>
+                    <option value='tenantStatus'>Status</option>
+                </select>
+            </div>
+            <div class="col-md-8">
+                Search Key:
+                <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
+            </div>
         </div>
-        <div class="col-md-4">
-            Search Key:
-            <input type="text" class="form-control" ng-model="searchKeyword[SearchTerm]">
-        </div>
+        <br />
 
-        <div class="col-md-3">
-            Search By Type:
-            <select class="form-control" ng-model="searchKeyword['tier']">
-                <option value=""> All </option>
-                     <option value="TRIAL">TRIAL</option>
-                     <option value="PAID_BASIC">PAID_BASIC</option>
-                     <option value="PAID_ENTERPRISE">PAID_ENTERPRISE</option>
-                     <option value="PAID_ADVANCED">PAID_ADVANCED</option>
-                     <option value="PAID_OTHERS">PAID_OTHERS</option>
-                     
-        </select>    
-
-        </div>
-
-        <div class="col-md-2">
-            Search By Status:
-            <select class="form-control" ng-model="searchKeyword['tenantStatus']">
-                <option value=""> All </option>
-                <option value="STOPPED">STOPPED</option>
-                <option value="DEPLOYED">DEPLOYED</option>
-                <option value="DELETE_FAILED">DELETE_FAILED</option>
-                <option value="DEPLOYED">DEPLOYED</option>
-                <option value="FIX_UPGRADE_FAILED">FIX_UPGRADE_FAILED</option>
-                <option value="FIX_UPGRADE_SCHEDULED">FIX_UPGRADE_SCHEDULED</option>
-                     
-        </select>    
-
-        </div>
-
-        <div class="col-md-1">
-         Page Count : 
-        <select ng-model="pageSize1" id="pageSize1" class="form-control" style="width: 80px;">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="20">30</option>
-            <option value="50">50</option>
-         </select>
-        </div>
-    </div>
-
-</div>
+ 
 <!-- new search end-->
                 
 
