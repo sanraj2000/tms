@@ -8,12 +8,11 @@ console.log("started");
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
 
-   
-
+ 
             // DEV
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/det.json",
+             url: "./output/stage.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -22,16 +21,15 @@ console.log("started");
           $scope.totalCount_cc2=$scope.allrows_cconns2.length;
            }, function(){alert("failed in loading file for AWS_US");});
     
-      
 
         
 
-  
+  // ---------------------------------------- end of AWS US --------------------------------
 
      // STAGE
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/det.json",
+            url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
@@ -42,13 +40,15 @@ console.log("started");
 
 
 
+          
 
+// end of AWS EU
 
 
     // INT
-                  var reposinfo2 = {
+                  var aws_au_1012 = {
                     method: 'GET',
-                  url: "./output/det.json",
+                  url: "./output/AWS.json",
                     headers: {"Content-Type": "application/json"}
                 }
                 $http(aws_au_1012).then(function(response){
@@ -57,11 +57,13 @@ console.log("started");
                 $scope.totalCount_cc3=$scope.allrows_cconns3.length;
                 }, function(){alert("failed in loading file for AWS_AU");});
 
-    
 
-              
-  
 
+
+
+
+
+ 
        //substring
   $scope.getData1 = $scope.allrows_cconns2;
   
