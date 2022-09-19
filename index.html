@@ -82,26 +82,7 @@
 <!-- new search end-->
                 
 
-    <div class="row myreposBlock" style="padding: 10px; background-color: #F2F2EA ; " >
-        <div class="col" style="float: right; text-align: center;">
-
-            <button ng-disabled="currentPage1 == 0" ng-click="currentPage1=currentPage1-1">
-                Previous
-            </button>
-            {{currentPage1+1}}/{{numberOfPages1()}}
-            <button ng-disabled="currentPage1 >= getData1().length/pageSize1 - 1" ng-click="currentPage1=currentPage1+1">
-                Next
-            </button>
-         </div>
-         
-    <div class="row  "  >
-        <div class="col" style="float: right; text-align: center;">
-            <label>Count : {{ allrows_cconns2.length }}</label>  
-           
-         </div>
-    </div>
-    </div>
-
+   
 
     <table class="table table-striped table-hover table-bordered">
         <tr>
