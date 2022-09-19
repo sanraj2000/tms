@@ -12,7 +12,7 @@ console.log("started");
             // DEV
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/det.json",
+             url: "./output/stage.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -28,7 +28,7 @@ console.log("started");
      // STAGE
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/det.json",
+            url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
@@ -47,7 +47,7 @@ console.log("started");
     // INT
                   var aws_au_1012 = {
                     method: 'GET',
-                  url: "./output/det.json",
+                  url: "./output/AWS.json",
                     headers: {"Content-Type": "application/json"}
                 }
                 $http(aws_au_1012).then(function(response){
@@ -117,6 +117,51 @@ console.log("started");
   $scope.myFunc = function() {
     $scope.count++;
   };
+
+  $scope.callWorkflow = function( rname) {
+    var reposinfo = {
+      method: 'GET',
+       url: "https://sandeepl.int-aws-us.webmethods.io/runflow/run/sync/1EMxYNkCWg?region="+rname,
+       crossDomain : true,
+
+      headers: {
+          "Content-Type": "application/json",
+      //    "Access-Control-Allow-Origin": "https://pages.github.softwareag.com",
+      //    'Access-Control-Request-Methods':'GET,HEAD,OPTIONS',
+    //    'Access-Control-Allow-Credentials':'true',
+          "Access-Control-Allow-Headers": "webhook_key",
+     //     "Origin":"https://pages.github.softwareag.com",
+    //      "Accept":"application/json, text/plain, */*",
+          "webhook_key":"398f9f1288740231667320931658378988341"
+    }
+     }
+    $http(reposinfo).then(function(response){
+
+     // console.log(response);
+
+      if (rname == 'AWS_US') {
+        $scope.alllogs =response.data;
+        $scope.totalCount=$scope.allrows.length;
+      } else if (rname == 'AWS_EU'){
+        $scope.alllogs1 =response.data;
+      }else if (rname == 'AWS_AU'){
+        $scope.alllogs2 =response.data;
+      }else if (rname == 'Azure_US'){
+        $scope.alllogs3 =response.data;
+      }else if (rname == 'Azure_EU'){
+        $scope.alllogs4 =response.data;
+      }else if (rname == 'Azure_AU'){
+        $scope.alllogs4 =response.data;
+      }
+      else if (rname == 'All'){
+    //    $scope.alllogs0_All = response.data;
+        $scope.alllogs = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_US");
+   //     $scope.alllogs1 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_EU");
+     //   $scope.alllogs2 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "AWS_AU");
+   //     $scope.alllogs3 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_US");
+    //    $scope.alllogs4 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_EU");
+     //   $scope.alllogs4 = $scope.allrows_All.filter(d => d.environment["@displayValue"] === "Azure_AU");
+      }
 
 
           //sort 'orderfilter' orderBy in controller
@@ -189,9 +234,7 @@ console.log("started");
                 return input.slice(start);
             }
         });
-
-
-    //tabs
+ //tabs
           function connectorTabs(tabName) {
             var i;
             var x = document.getElementsByClassName("wmiotabtype");
@@ -207,14 +250,6 @@ console.log("started");
           //// Get the element with id="defaultOpen" and click on it
           //  document.getElementById("defaultOpen").Click();
 
-          
-          //tabs schedules
-          function connectorTabs2(tabName) {
-            var i;
-            var x = document.getElementsByClassName("wmiotabtype2");
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
-            }
-            document.getElementById(tabName).style.display = "block";
-           
-          }
+         
+Footer
+© 2022 GitHub, Inc.
