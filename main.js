@@ -12,7 +12,7 @@ console.log("started");
             // DEV
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/det.json",
+             url: "./output/stage.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
@@ -24,12 +24,11 @@ console.log("started");
 
         
 
-  // ---------------------------------------- end of AWS US --------------------------------
-
+  
      // STAGE
             var reposinfo1 = {
               method: 'GET',
-            url: "./output/det.json",
+            url: "./output/AWS.json",
               headers: {"Content-Type": "application/json"}
           }
           $http(reposinfo1).then(function(response){
@@ -42,13 +41,13 @@ console.log("started");
 
           
 
-// end of AWS EU
+
 
 
     // INT
                   var aws_au_1012 = {
                     method: 'GET',
-                  url: "./output/det.json",
+                  url: "./output/AWS.json",
                     headers: {"Content-Type": "application/json"}
                 }
                 $http(aws_au_1012).then(function(response){
@@ -118,9 +117,7 @@ console.log("started");
   $scope.myFunc = function() {
     $scope.count++;
   };
-  
-		
-		
+
   $scope.callWorkflow = function( rname) {
     var reposinfo = {
       method: 'GET',
@@ -196,8 +193,9 @@ console.log("started");
 
    $scope.callWorkflow ("AWS_US");
 
-  };		
- 
+  };
+
+   //&reporting_date=03/08/2021
 
    $scope.currentDateString = function() {
     //date
@@ -207,7 +205,7 @@ console.log("started");
   };
 
   // default first call
-  $scope.callAll ("My First Call");
+   $scope.callAll ("My First Call");
 
 
           $scope.formatVersion = function (actualVersion){
@@ -237,7 +235,8 @@ console.log("started");
             }
         });
 
-     //tabs
+
+    //tabs
           function connectorTabs(tabName) {
             var i;
             var x = document.getElementsByClassName("wmiotabtype");
@@ -263,7 +262,4 @@ console.log("started");
             }
             document.getElementById(tabName).style.display = "block";
            
-     
-
-
-   
+          }
