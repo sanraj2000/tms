@@ -191,7 +191,7 @@ console.log("started");
     $scope.callWorkflow ("WMIO Preprod");
     $scope.callWorkflow ("WMIO INT");*/
 
-   $scope.callWorkflow ("AWS_US");
+   //$scope.callWorkflow ("AWS_US");
 
   };
 
