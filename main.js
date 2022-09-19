@@ -25,7 +25,7 @@ console.log("started");
         // AWS US 1011
         var aws_us_1011 = {
           method: 'GET',
-        url: "./output/AWS_US_1011.json",
+        url: "./output/det.json",
           headers: {"Content-Type": "application/json"}
         }
         $http(aws_us_1011).then(function(response){
@@ -58,7 +58,7 @@ console.log("started");
            // AWS EU 1011
            var aws_eu_1011 = {
             method: 'GET',
-          url: "./output/AWS_EU_1011.json",
+          url: "./output/det.json",
             headers: {"Content-Type": "application/json"}
           }
           $http(aws_eu_1011).then(function(response){
@@ -87,7 +87,7 @@ console.log("started");
       // AWS AU 1011
               var aws_au_1011 = {
                 method: 'GET',
-              url: "./output/AWS_AU_1011.json",
+              url: "./output/det.json",
                 headers: {"Content-Type": "application/json"}
               }
               $http(aws_au_1011).then(function(response){
@@ -116,7 +116,7 @@ console.log("started");
           // Azure US 1011
           var azure_us_1011 = {
             method: 'GET',
-          url: "./output/Azure_US_1011.json",
+          url: "./output/det.json",
             headers: {"Content-Type": "application/json"}
           }
           $http(azure_us_1011).then(function(response){
@@ -148,7 +148,7 @@ console.log("started");
              // Azure EU 1011
              var azure_eu_1011 = {
               method: 'GET',
-            url: "./output/Azure_EU_1011.json",
+            url: "./output/det.json",
               headers: {"Content-Type": "application/json"}
             }
             $http(azure_eu_1011).then(function(response){
@@ -177,7 +177,7 @@ console.log("started");
 
      var azure_au_1011 = {
       method: 'GET',
-    url: "./output/Azure_AU_1011.json",
+    url: "./output/det.json",
       headers: {"Content-Type": "application/json"}
     }
     $http(azure_au_1011).then(function(response){
