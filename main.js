@@ -22,20 +22,7 @@ console.log("started");
           $scope.totalCount_cc2=$scope.allrows_cconns2.length;
            }, function(){alert("failed in loading file for AWS_US");});
     
-        // AWS US 1011
-        var aws_us_1011 = {
-          method: 'GET',
-        url: "./output/det.json",
-          headers: {"Content-Type": "application/json"}
-        }
-        $http(aws_us_1011).then(function(response){
-        $scope.temp = response.data;
-       // console.log ("old1 " +$scope.allrows_cconns2);
-       // console.log ("new 1 "+$scope.temp);
-        $scope.allrows_cconns2 = $scope.allrows_cconns2.concat($scope.temp);
-       // console.log ("final "+$scope.allrows_cconns2);
-        $scope.totalCount_cc2=$scope.allrows_cconns2.length;
-        }, function(){alert("failed in loading file for AWS_US_1011");});
+      
 
         
 
@@ -55,20 +42,6 @@ console.log("started");
 
 
 
-           // AWS EU 1011
-           var aws_eu_1011 = {
-            method: 'GET',
-          url: "./output/det.json",
-            headers: {"Content-Type": "application/json"}
-          }
-          $http(aws_eu_1011).then(function(response){
-          $scope.temp = response.data;
-   
-          $scope.allrows_cconns = $scope.allrows_cconns.concat($scope.temp);
-      
-          $scope.totalCount_cc=$scope.allrows_cconns.length;
-          }, function(){alert("failed in loading file for AWS_EU_1011");});
-
 // end of AWS EU
 
 
@@ -84,20 +57,7 @@ console.log("started");
                 $scope.totalCount_cc3=$scope.allrows_cconns3.length;
                 }, function(){alert("failed in loading file for AWS_AU");});
 
-      // AWS AU 1011
-              var aws_au_1011 = {
-                method: 'GET',
-              url: "./output/det.json",
-                headers: {"Content-Type": "application/json"}
-              }
-              $http(aws_au_1011).then(function(response){
-              $scope.temp = response.data;
-       
-              $scope.allrows_cconns3 = $scope.allrows_cconns3.concat($scope.temp);
-          
-              $scope.totalCount_cc3=$scope.allrows_cconns3.length;
-              }, function(){alert("failed in loading file for AWS_AU_1011");});
-
+    
 
      // ----------##########################------ Start of Azure US -----------------################################---------------
 
