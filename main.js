@@ -119,12 +119,7 @@ console.log("started");
     $scope.count++;
   };
 
- 
-
-     
-  };
-
-   $scope.callWorkflow = function( rname) {
+  $scope.callWorkflow = function( rname) {
     var reposinfo = {
       method: 'GET',
        url: "https://sandeepl.int-aws-us.webmethods.io/runflow/run/sync/1EMxYNkCWg?region="+rname,
@@ -184,6 +179,8 @@ console.log("started");
 
      
   };
+
+ 
 
   $scope.callAll = function(demoName) {
    // console.log("--------------"+demoName);
