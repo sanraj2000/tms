@@ -13,7 +13,7 @@ console.log("started");
             // AWS US 1012
             var reposinfo2 = {
               method: 'GET',
-             url: "./output/AWS_US.json",
+             url: "./output/det.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinfo2).then(function(response2){
