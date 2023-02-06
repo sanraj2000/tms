@@ -12,7 +12,7 @@ console.log("started");
             // DEV
             var reposinforun = {
               method: 'GET',
-             url: "./awsdev.json",
+             url: "./output/awsdev.json",
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinforun).then(function(response2){
