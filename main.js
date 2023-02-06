@@ -7,6 +7,20 @@ console.log("started");
 	var app = angular.module('cetApp', []);
 	app.controller('cetCtrl', function($scope,$http,$window, $location, $anchorScroll, $timeout,$filter) {
 
+		
+		
+            // DEV
+            var reposinforun = {
+              method: 'GET',
+             url: "./awsdev.json",
+              headers: {"Content-Type": "application/json"}
+           }
+          $http(reposinforun).then(function(response2){
+            $scope.allrows_cconns2 =response2.data;
+        
+          $scope.totalCount_cc2=$scope.allrows_cconns2.length;
+           }, function(){alert("failed in loading file for DEV");});
+    
 
  
             // DEV
