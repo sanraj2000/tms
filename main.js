@@ -16,9 +16,9 @@ console.log("started");
               headers: {"Content-Type": "application/json"}
            }
           $http(reposinforun).then(function(response2){
-            $scope.allrows_cconns2 =response2.data;
+            $scope.allrows_cconns2r =response2.data;
         
-          $scope.totalCount_cc2=$scope.allrows_cconns2.length;
+          $scope.totalCount_cc2=$scope.allrows_cconns2r.length;
            }, function(){alert("failed in loading file for DEV");});
     
 
