@@ -71,7 +71,7 @@
             </tr>
             <tr ng-repeat="connD2 in allrows_cconns2r  | filter: searchKeyword | startFrom:currentPage1*pageSize1 | limitTo:pageSize1">
                 <td>{{ $index+1 }}</td>
-                <td>{{ connD2.runners.id }}</td>
+                <td>{{ connD2.runners }}</td>
                 <td>{{ connD2.runners.name }}</td>
                 <td>{{ connD2.runners.os }}</td>
                 <td>{{ connD2.runners.status }}</td>
