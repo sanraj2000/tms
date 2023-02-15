@@ -74,14 +74,9 @@
                 <th style="width: 200px;">Created</th>
                 <th style="width: 200px;">Updated</th>
             </tr>
-            <tr ng-repeat="connD2 in allrows_cconns2r  | filter: searchKeyword | startFrom:currentPage1*pageSize1 | limitTo:pageSize1">
+            <tr ng-repeat="connD2 in allrows_cconns2r">
                 <td>{{ $index+1 }}</td>
-                <td>{{ connD2.runners }}</td>
-                <td>{{ connD2.name }}</td>
-                <td>{{ connD2.runners.os }}</td>
-                <td>{{ connD2.runners.status }}</td>
-                <td> {{ connD2.runners.busy }} </td>
-                <td> {{ connD2.runners.lables.name }} </td>
+                <td>{{ connD2.runners[$index+1] }}</td>
             </tr>
         </table>
     </div>
