@@ -74,9 +74,9 @@
                 <th style="width: 200px;">Created</th>
                 <th style="width: 200px;">Updated</th>
             </tr>
-            <tr >
-                <td>{{ allrows_cconns2.runners[1].id }}</td>
-                <td>{{ allrows_cconns2.runners[0].id }}</td>
+            <tr ng-repeat="x in  allrows_cconns2" >
+                <td>{{ x.runners[1].id }}</td>
+                
             </tr>
         </table>
     </div>
@@ -84,7 +84,7 @@
 
 
 
-
+<td>{{ allrows_cconns2.runners[0].id }}</td>
 
 
 </body>
