@@ -65,9 +65,9 @@
             {{allrows_cconns2.runners[0].labels[0].name}}
         <table class="table table-striped table-hover table-bordered">
             <tr>
-                <th style="width: 50px;">ID</th>
-                <th style="width: 200px;">Tenant Name</th>
-                <th style="width: 200px;">Type</th>
+                <th style="width: 50px;">S.No</th>
+                <th style="width: 200px;">Runner Name</th>
+                <th style="width: 200px;">Status</th>
                 <th style="width: 200px;">Status</th>
                 <th style="width: 200px;">Email</th>
                 <th style="width: 200px;">Version</th>
@@ -75,7 +75,10 @@
                 <th style="width: 200px;">Updated</th>
             </tr>
             <tr ng-repeat="x in  allrows_cconns2.runners" >
-                <td>{{ x.id }}</td>
+                <td>{{ $index+1 }}</td>
+                <td>{{ x.name }}</td>
+                <td>{{ x.status }}</td>
+                <td>
                 
             </tr>
         </table>
